@@ -1,10 +1,9 @@
-<nav>
+<zui-shell-nav slot="nav">
   {% set navPages = collections.all | eleventyNavigation %}
-  <ul>
   {%- for entry in navPages %}
-    <li>
-      <a href="{{ entry.url | url }}"{% if entry.url == page.url %} data-current="current item"{% endif %}>{{ entry.title }}</a>
-    </li>
+  <zui-shell-nav-item>
+    <zui-icon icon="zui-rocket" slot="icon"></zui-icon>
+    <a href="{{ entry.url | url }}"{% if entry.url == page.url %} active{% endif %}>{{ entry.title }}</a>
+  </zui-shell-nav-item>
   {%- endfor %}
-  </ul>
 </nav>

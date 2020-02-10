@@ -3,6 +3,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title or renderData.title or metadata.title }}</title>
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/@@zywave/zui-bundle@next/dist/css/zui-bundle.fouc.css">
+  <link rel="stylesheet" href="https://unpkg.com/@@zywave/zui-bundle@next/dist/css/zui-bundle.app.css">
+  <script src="https://unpkg.com/@zywave/zui-bundle@next/dist/zui-loader.js"></script>
+  <script src="https://unpkg.com/@zywave/zywave-api-toolkit-bundle@next/dist/loader.js"></script>
   {% set css %}
     {% include "assets/css/inline.css" %}
   {% endset %}

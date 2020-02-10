@@ -4,20 +4,13 @@
 	{% include "components/head.njk" %}
 
 	<body>
-
-		<header>
-			<em>
-				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
+		<zywave-api-proxy api-base-url="https://api.zywave.com/proxy/"></zywave-api-proxy>
+		<zywave-shell>
+			<section class="zui-layout">
+				{{ layoutContent | safe }}
+			</section>
 			{% include "components/nav.njk" %}
-		</header>
-
-		<main>
-			{{ layoutContent | safe }}
-		</main>
-
-		{% include "components/footer.njk" %}
-
+		</zywave-shell>
 	</body>
 
 </html>
